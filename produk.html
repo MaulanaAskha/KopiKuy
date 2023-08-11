@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <title>Produk</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css">
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        /* tulis kode CSS internal di bawah sini */
+        nav,
+        footer,
+        .card-body a {
+            background-color: darkcyan;
+        }
+
+        .nav-item {
+            color: #666;
+            display: inline-block;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .nav-item:after {
+            display: block;
+            content: '';
+            border-bottom: solid 3px white;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out;
+        }
+
+        .nav-item:hover:after {
+            transform: scaleX(1);
+        }
+
+        .bg-filter {
+            background-color: lightgray;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+        }
+
+        .text-harga,
+        .ratings {
+            padding-top: auto;
+            color: darkcyan;
+        }
+
+        .btn-darkcyan {
+            background-color: darkcyan;
+        }
+
+        .btn-darkcyan:hover {
+            background-color: rgb(1, 77, 77);
+        }
+
+        .card {
+            border: 1px darkcyan solid;
+        }
+
+        .produk .card-title {
+            height: 20px;
+        }
+
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            overflow: hidden;
+            transform: scale(1.1);
+        }
+
+        .review-count {
+            font-size: 12px;
+        }
+
+        /* Batas Akhir penulisan kode CSS internal */
+    </style>
+</head>
+
+<body>
+    <!-- Tulis Kode Bootstrap Di Bawah Sini -->
+    <nav class="navbar navbar-dark sticky-top navbar-expand-lg w-100 fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="images/logo/logo_kuy.png" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 fw-semibold">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#best-seller">Best Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#our-team">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#review">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+                <a class="btn btn-outline-light" href="https://wa.me/6282221924292" target="_blank"> <i
+                        class="bi bi-whatsapp"></i> Chat Me!</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="produk text-center my-5 py-5 align-items-center">
+        <div class="container">
+            <h1>Pilih Produk Anda</h1>
+            <p class="fs-4">Kualitas terbaik biji kopi pilihan, Fresh diambil langsung dari petani</p>
+            <hr class="border border-3 opacity-75">
+
+            <div class="row mb-5 bg-filter">
+                <h5 class="col-lg-1 col-xl-1 col-md-12 col-sm-11  mx-auto mt-2">FILTER </h5>
+                <div class="col-md-12 col-lg-4">
+                    <input type="search" id="cari" value="" class="form-control" placeholder="Cari Produk" />
+                </div>
+
+                <div class=" col-md-12 col-lg-3">
+                    <select class="form-select" id="kategori">
+                        <option value="semua" selected>Semua Kategori</option>
+                        <option value="signature">Signature</option>
+                        <option value="classic">Classic</option>
+                        <option value="fancy">Fancy</option>
+                        <option value="nonkopi">Non Coffee</option>
+                    </select>
+
+                </div>
+                <div class=" col-md-12 col-lg-3">
+                    <select class="form-select" id="select_sort">
+                        <option selected disabled>Urutkan Berdasarkan</option>
+                        <option value="harga-terendah">Harga Terendah</option>
+                        <option value="harga-tertinggi">Harga Tertinggi</option>
+                    </select>
+
+                </div>
+
+                <button type="button"
+                    class="col-lg-1 col-xl-1 col-md-2 col-sm-11 mt-sm-2 mt-md-0 mx-auto btn btn-darkcyan text-white"
+                    id="filter">
+                    Terapkan
+                </button>
+            </div>
+
+            <div id="baris_produk" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                <!--- akan terisi data dari JSON -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link link-light active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="index.html#best-seller">Best Seller</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="index.html#our-team">Our Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="index.html#review">Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="index.html#contact-us">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-light text-end">
+                    © 2023 Kopi Kuy. All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Batas Akhir penulisan kode Bootstrap -->
+    <script>
+        /* Tulis Javascript Di bawah Sini */
+        var Sumber2 = "data.json"
+        GetData(null, "", null)
+
+        filter.onclick = function () {
+            var search = cari.value
+            var kat = kategori.value
+            var sort = select_sort.value
+            GetData(kat, search, sort)
+        }
+
+        function GetData(kat, search, sort) {
+            $.getJSON(Sumber2).then(function (data) {
+
+                // FILTER KATEGORI
+                switch (kat) {
+                    case "signature":
+                        Data = data.signature
+                        break
+                    case "classic":
+                        Data = data.classic
+                        break
+                    case "fancy":
+                        Data = data.fancy
+                        break
+                    case "nonkopi":
+                        Data = data.nonkopi
+                        break
+                    default:
+                        Data = [...data.signature, ...data.classic, ...data.fancy, ...data.nonkopi]
+                        break
+                }
+
+                // FILTER URUTAN HARGA
+                switch (sort) {
+                    case "harga-terendah":
+                        Data.sort((a, b) => a.harga - b.harga)
+                        break
+                    case "harga-tertinggi":
+                        Data.sort((a, b) => b.harga - a.harga)
+                        break
+                }
+
+                // FILTER SEARCH
+                if (search !== "") {
+                    search = search.toUpperCase();
+                    Data = Data.filter(aray => aray.nama.toUpperCase().includes(search));
+                }
+
+                ShowData(Data)
+            })
+        }
+
+        function ShowData(data_kopi) {
+            baris_produk.innerHTML = "";
+
+            data_kopi.forEach(item => {
+                baris_produk.innerHTML +=
+                    `<div class="col mb-4">
+                            <div class="card overflow-hidden">
+                                <img src="${item.foto}" class="card-img-top " alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title align-items-center">${item.nama}</h5>
+
+                                    <div class="row my-4">
+                                        <div class="col">
+                                            <i class="bi bi-basket"></i> ${item.size}
+                                        </div>
+                                        <div class="col fw-bold text-harga">
+                                            Rp. ${item.harga},-
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn text-white w-auto btn-darkcyan"><i class="bi bi-hand-thumbs-up"></i></button>
+                                        <a href="${item.link}"
+                                        class="btn text-white w-75 btn-darkcyan"><i class="bi bi-cart"></i> Beli</a>
+                                        </div>    
+                                </div>
+                            </div>
+                        </div>`
+            });
+
+            if (baris_produk.innerHTML.length < 1) {
+                baris_produk.innerHTML +=
+                    ` <h6 class="fs-5 w-100">Produk tidak ditemukan</h6>`
+            };
+        }
+
+
+
+        /* Batas Akhir penulisan kode Javascript */
+    </script>
+
+
+    <!--- CODE RATING
+        <div class="ratings">
+                                                <i class="bi bi-star-fill "></i>
+                                                <i class="bi bi-star-fill "></i>
+                                                <i class="bi bi-star-fill "></i>
+                                                <i class="bi bi-star-fill "></i>
+                                                <i class="bi bi-star-half "></i>
+                                            </div>
+                                            <span class="review-count">200 Reviews</span>
+    -->
+    <!-- CODE TAMBAHAN OPTION
+                        <option value="most-popular">Most Popular</option>
+                        <option value="paling-baru">Paling Baru</option>
+                        <option value="paling-lama">Paling Lama</option>
+                        <option value="rating-terendah">Rating Terendah</option>
+                        <option value="rating-tertinggi">Rating Tertinggi</option>
+                        -->
+
+</body>
+
+</html>

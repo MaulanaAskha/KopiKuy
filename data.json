@@ -1,0 +1,107 @@
+{
+    "signature": [
+        {
+            "foto": "images/produk/product_capuchino.jpg",
+            "nama": "Cappuccino",
+            "size": "500 ML",
+            "harga": "80.000",
+            "link": "https://www.google.com/search?q=cappuccino+arabica&tbm=shop",
+            "likes": "126"
+        },
+        {
+            "foto": "images/produk/americano.jpg",
+            "nama": "Americano",
+            "size": "250 ML",
+            "harga": "50.000",
+            "link": "https://www.google.com/search?q=americano&tbm=shop",
+            "likes": "100"
+        },
+        {
+            "foto": "images/produk/product_latte.jpg",
+            "nama": "Latte Arabica",
+            "size": "500 ML",
+            "harga": "85.000",
+            "link": "https://www.google.com/search?q=latte+arabica&tbm=shop",
+            "likes": "98"
+        }
+    ],
+    "classic": [
+        {
+            "foto": "images/produk/product_kopi_susu.jpg",
+            "nama": "Kopasus - Kopi Tubruk Pake Susu",
+            "size": "500 ML",
+            "harga": "70.000",
+            "link": "https://www.google.com/search?q=Kopi+Tubruk+Pake+Susu&tbm=shop",
+            "likes": "152"
+        },
+        {
+            "foto": "images/produk/americano.jpg",
+            "nama": "Kopi Tubruk",
+            "size": "250 ML",
+            "harga": "55.000",
+            "link": "https://www.google.com/search?q=kopi+tubruk&tbm=shop",
+            "likes": "108"
+        }
+    ],
+    "fancy": [
+        {
+            "foto": "images/produk/caramel-latte.jpg",
+            "nama": "Caramel Latte",
+            "size": "500 ML",
+            "harga": "90.000",
+            "link": "https://www.google.com/search?q=caramel-latte&tbm=shop",
+            "likes": "152"
+        },
+        {
+            "foto": "https://img.freepik.com/free-photo/hot-chocolate-with-truffles-top-view_23-2148349205.jpg?w=996&t=st=1691680734~exp=1691681334~hmac=020e9220c42a6d42f3eb2d6887f1388f88467f74db815408850b8e0146cd516d",
+            "nama": "Hazelnut Latte",
+            "size": "500 ML",
+            "harga": "95.000",
+            "link": "https://www.google.com/search?q=hazelnut+latte&tbm=shop",
+            "likes": "108"
+        },
+        {
+            "foto": "https://images.squarespace-cdn.com/content/v1/5c54e10193a6324e1f78b44e/1562910642027-CH8MAU4MOZ7004CTTI2T/IMG_1050.jpg?format=1500w",
+            "nama": "Cappuccino Cream Brulee",
+            "size": "500 ML",
+            "harga": "100.000",
+            "link": "https://www.google.com/search?q=Cappuccino+Cream+Brulee&tbm=shop",
+            "likes": "108"
+        }
+    ],
+    "nonkopi": [
+        {
+            "foto": "https://img.freepik.com/free-photo/leaf-plate-wood-object-healthy-eating_1172-451.jpg?w=740&t=st=1691680908~exp=1691681508~hmac=b3f3675e37a195df6b1ef940760c9c147fc9181709140268a084cb70659cf04b",
+            "nama": "Green Tea",
+            "size": "500 ML",
+            "harga": "50.000",
+            "link": "https://www.google.com/search?q=green+tea&tbm=shop",
+            "likes": "111"
+        },
+        {
+            "foto": "https://img.freepik.com/free-photo/chocolate-mousse-dessert-garnished-with-mint-leaf-wooden-table-white-background_123827-25947.jpg?w=996&t=st=1691681009~exp=1691681609~hmac=944b954e053c1e1d79d4ab5c44945b44aef80d08e8b532cf4328b37c2671ecaa",
+            "nama": "Cocholate",
+            "size": "500 ML",
+            "harga": "50.000",
+            "link": "https://www.google.com/search?q=chocolate&tbm=shop",
+            "likes": "101"
+        }
+        ,
+        {
+            "foto": "https://img.kurio.network/Vl8ICjtju383tWgUrt2xWyCc3gk=/440x440/filters:quality(80)/https://kurio-img.kurioapps.com/20/06/28/b8bcbf61-e003-459b-b347-dd8d72f0d4b8.jpg",
+            "nama": "Redvelvet Latte",
+            "size": "500 ML",
+            "harga": "70.000",
+            "link": "https://www.google.com/search?q=redvelvet+latte&tbm=shop",
+            "likes": "218"
+        },
+        {
+            "foto": "https://yumtreats.com.au/site/images/cache/taromilk1.592.jpg",
+            "nama": "Taro Latte",
+            "size": "500 ML",
+            "harga": "70.000",
+            "link": "https://www.google.com/search?q=taro+latte&tbm=shop",
+            "likes": "151"
+        }
+    ]
+}

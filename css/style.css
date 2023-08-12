@@ -15,9 +15,14 @@ html {
 Kode di bawah ini untuk mengatur nav sampai footer agar memiliki tampilan flexibel
 selengkapnya akan di bahas di hari ke 3
 */
+header {
+  display: flex;
+  align-items: flex-start;
+  color: white;
+  margin-bottom: 2px;
+}
 
 nav,
-header,
 section,
 footer {
   /* 
@@ -132,8 +137,6 @@ nav {
    untuk pengguna vscode silahkan arahkan mouse ke kotak warna di bawah
    untuk mengganti warna sesuai keinginan
    */
-  background-color: darkcyan;
-
   /* box-shadow membuat efek bayangan */
   box-shadow: 0 3px 7px -2px #000;
 
@@ -177,6 +180,25 @@ nav a {
   padding-right: 8px;
 }
 
+.nav-item {
+  color: #666;
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.nav-item:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px white;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.nav-item:hover:after {
+  transform: scaleX(1);
+}
+
 a.shop {
   margin-right: 100px;
 }
@@ -202,6 +224,13 @@ a.chat {
 
 /* HEADER */
 
+header {
+  background-image: url(https://cdn.pixabay.com/photo/2021/04/05/21/32/coffee-6154681_1280.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 header,
 section {
   /*
@@ -213,16 +242,10 @@ section {
   padding-bottom: 80px;
 
   /* margin mengatur jarak ke luar */
-  margin-bottom: 80px;
+  margin-bottom: 00px;
 }
 
 /* penulisan CSS dapat digabung dengan beberapa elemen */
-header div.kiri,
-header div.kanan {
-  /* width mengatur lebar elemen. 50% artinya setengah ukuran elemen pembungkus */
-  width: 50%;
-  padding: 50px;
-}
 
 header h1 {
   margin-bottom: 20px;
@@ -234,11 +257,18 @@ header p {
   margin-bottom: 20px;
 }
 
+.svg-kopi {
+  filter: brightness(0) invert(1);
+  padding-bottom: 14px;
+  padding-left: 5px;
+}
+
 div.olshop img {
   width: 40px;
   /* aspect-ratio:1 agar tinggi menyesuaikan width */
   aspect-ratio: 1;
   margin-right: 10px;
+  opacity: 100%;
 }
 
 /* Best Seller */
@@ -249,6 +279,7 @@ section.best-seller {
   /* background-color mengatur warna latar belakang elemen */
   background-color: #eee6dc;
 
+  box-shadow: inset 0px 0px 23px -6px #707070;
   /* text-align mengatur rata tulisan, bisa bernilai: left, right, center, justify */
   text-align: center;
 }
@@ -266,7 +297,6 @@ section.best-seller::after {
   height: 76px;
 
   /* background-image untuk menambahkan gambar sebagai background */
-  background-image: url(../images/background/garis-atas.png);
 
   /*background-size agar gambar latar menyesuaikan tinggi / lebar elemen */
   background-size: cover;
@@ -277,7 +307,6 @@ section.best-seller::after {
 
 section.best-seller::after {
   height: 60px;
-  background-image: url(../images/background/garis-bawah.png);
   top: unset;
   bottom: -60px;
 }
@@ -342,8 +371,9 @@ div.produk p {
 
 section.about-us {
   /* max-width: 80%; mengatur lebar maksimal elemen tidak boleh melebihi 80% layar */
-  max-width: 80%;
-
+  max-width: 100%;
+  background-image: url(../images/background/bgkopi.png);
+  background-repeat: repeat;
   /* margin-left dan margin-right auto akan membuat posisi elemen berada di tengah */
   margin-left: auto;
   margin-right: auto;
@@ -372,10 +402,39 @@ yang ada di dalam <section class="about-us">
 
 section.about-us p:nth-child(2) {
   margin-bottom: 40px;
+  width: 80%;
 }
 
 section.about-us p:nth-child(4) {
-  margin-top: 40px;
+  margin-top: 55px;
+  width: 80%;
+}
+
+.slide {
+  height: 400px;
+  width: 80%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.w3-button {
+  border: none;
+  display: inline-block;
+  margin-top: 2px;
+  padding: 8px 16px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  background-color: brown;
+  color: #fff;
+}
+
+.w3-button:hover {
+  color: #000;
+  background-color: #ccc !important;
 }
 
 /* OUR TEAM */
@@ -491,26 +550,19 @@ div.testimoni > p {
 /* CONTACT US */
 section.contact-us {
   margin-bottom: 20px;
+  align-items: stretch;
+  justify-content: left;
 }
 
 section.contact-us iframe {
-  width: 100%;
-  height: 300px;
+  width: 75%;
+  height: 500px;
   border: 0;
-}
-
-div.kontak {
-  width: 30%;
-  /* color mengatur warna tulisan */
-  color: darkcyan;
-  text-align: center;
-  margin-top: 50px;
 }
 
 /* FOOTER */
 
 footer {
-  background-color: darkcyan;
   padding-top: 15px;
   padding-bottom: 15px;
   color: #fff;
@@ -518,18 +570,30 @@ footer {
   padding-left: 40px;
 }
 
-footer div.navigasi {
-  margin-left: 20px;
-  margin-right: auto;
+.border-footer {
+  border-bottom: 2px solid white;
 }
 
-footer div.navigasi a {
-  padding: 8px;
+.navigasi a {
+  color: #fff;
 }
-
 /* UNTUK kode RESPONSIF hari ke 3 tulis DI BAWAH sini */
 
+@media (max-width: 600px) {
+  .slide {
+    height: 300px;
+  }
+}
+
 @media (max-width: 768px) {
+  .slide {
+    height: 300px;
+  }
+
+  header {
+    background-position: center;
+  }
+
   div.navigasi {
     display: none;
   }
@@ -542,10 +606,8 @@ footer div.navigasi a {
     margin-right: auto;
   }
 
-  header div.kiri,
-  header div.kanan {
+  header div .container {
     padding: 20px;
-    text-align: center;
     width: 100%;
   }
 

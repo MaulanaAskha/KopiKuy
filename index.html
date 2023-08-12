@@ -5,85 +5,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Website Kopi Kuy</title>
+    <title>New Kopi Kuy</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css">
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <nav>
-        <img class="logo" src="images/logo/logo_kuy.png">
-        <div class="navigasi">
-            <a href="#best-seller">Best Seller</a>
-            <a href="#our-team">Our Team</a>
-            <a href="#review">Review</a>
-            <a href="#contact-us">Contact Us</a>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg w-100 fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="images/logo/logo_kuy.png" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse me-4" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 fw-semibold">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#best-seller">Best Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#our-team">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#review">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#contact-us">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="produk.html">Shop</a>
+                    </li>
+                </ul>
+                <a class="btn btn-outline-light" href="https://wa.me/6282221924292" target="_blank"> <i
+                        class="bi bi-whatsapp"></i> Chat Me!</a>
+            </div>
         </div>
-        <a class="shop" href="produk.html">Shop</a>
-        <a class="chat" href="https://wa.me/6282221924292?text=Saya ingin bertanya" target="_blank">Chat</a>
     </nav>
 
     <!-- Tulis Kode HTML / <header> Setelah baris di bawah ini (baris 28) -->
 
-    <header>
-        <div class="kiri">
-            <h1>Kopi Kuy <img src="images/icon/icon_kopi.svg"></h1>
+    <header style="padding:2; margin-left: 0; height:50rem">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12 col-xl-8 py-5 w-50">
+                    <h1>Kopi Kuy <img src="images/icon/icon_kopi.svg" class="svg-kopi"></h1>
+                    <p class="lead">Kopi Kuy merupakan sebuah startup kopi retail yang ingin menyajikan high
+                        quality Coffee untuk para
+                        pelanggannya.</p>
+                    <p style="padding-top: 20px;">Dapat dibeli melalui</p>
 
-            <p>
-                Kopi Kuy merupakan sebuah startup kopi retail yang ingin menyajikan high quality Coffee untuk para pelanggannya.
-            </p>
+                    <div class="olshop">
+                        <img src="images/logo/logo_bukalapak.png" alt="">
+                        <img src="images/logo/logo_tokopedia.png" alt="">
+                        <img src="images/logo/logo_shopee.png" alt="">
+                    </div>
 
-            <p>Dapat dibeli melalui</p>
-
-            <div class="olshop">
-                <img src="images/logo/logo_bukalapak.png" alt="">
-                <img src="images/logo/logo_tokopedia.png" alt="">
-                <img src="images/logo/logo_shopee.png" alt="">
+                </div>
             </div>
-        </div>
-
-        <div class="kanan">
-            <img src="images/header/header4.png">
         </div>
     </header>
 
     <section id="best-seller" class="best-seller">
         <h2>Menu Andalan Kami</h2>
-    
+
         <p>
             Nikmati menu andalan yang menjadi favorit customer Kami
         </p>
-    
+
         <div class="produk">
             <img src="images/produk/product_capuchino.jpg" alt="">
             <p>Capuchino</p>
         </div>
-    
+
         <div class="produk">
-            <img src="images/produk/product_espresso.jpg" alt="">
-            <p>Espresso</p>
+            <img src="https://img.freepik.com/free-photo/leaf-plate-wood-object-healthy-eating_1172-451.jpg?w=740&t=st=1691680908~exp=1691681508~hmac=b3f3675e37a195df6b1ef940760c9c147fc9181709140268a084cb70659cf04b"
+                alt="">
+            <p>Green Tea</p>
         </div>
-    
+
         <div class="produk">
             <img src="images/produk/product_kopi_susu.jpg" alt="">
-            <p>Kopi Susu</p>
+            <p>Kopasus</p>
         </div>
-    
+
         <div class="produk">
             <img src="images/produk/product_latte.jpg" alt="">
-            <p>Cafe Latte</p>
+            <p>Latte Arabica</p>
         </div>
     </section>
 
     <section id="about-us" class="about-us">
         <h2>Gak Ngopi Gak Kuy!</h2>
         <p>
-            Didirikan pada 2017, Kopi Kuy merupakan sebuah startup kopi retail 
-            yang ingin menyajikan kopi dengan kualitas tinggi untuk para pelanggannya. 
-            Nama Kuy yang diambil dari "yuk" yang merupakan harapan kami untuk mengajak semua 
+            Didirikan pada 2017, Kopi Kuy merupakan sebuah startup kopi retail
+            yang ingin menyajikan kopi dengan kualitas tinggi untuk para pelanggannya.
+            Nama Kuy yang diambil dari "yuk" yang merupakan harapan kami untuk mengajak semua
             yang terlibat dalam bisnis kami untuk bersama-sama menikmati sajian kopi yang berkualitas.
         </p>
-        <img src="images/about-us/meracik kopi.jpg">
+
+        <div class="row slide">
+
+            <img class="mySlides" src="images/about-us/meracik kopi.jpg">
+            <img class="mySlides" src="images/about-us/aset_kopi_jumbo.png">
+            <img class="mySlides" src="images/about-us/barista.jpg">
+            <img class="mySlides" src="images/about-us/mesin-kopi.jpg">
+            <img class="mySlides" src="images/about-us/mesin-kopi2.jpg">
+
+            <div>
+                <button class="w3-button" onclick="plusDivs(-1)">&#10094; Prev</button>
+                <button class="w3-button" onclick="plusDivs(1)">Next &#10095;</button>
+            </div>
+
+        </div>
         <p>
             Kopi dari petani terpilih, dan berkualitas tinggi diproses
             secara sempurna dan diteruskan oleh para barista handal, yang penuh semangat
@@ -93,30 +132,30 @@
 
     <section class="our-team" id="our-team">
         <h2>Our Team</h2>
-    
+
         <p>
             Kami berinvestasi dalam rasa - mulai dari pemilihan biji, metode pemanggangan,
             hingga barista dengan sertifikat internasional.
         </p>
-    
+
         <div class="team">
             <img src="images/team/team1.jpg">
             <h3>Riki Steven</h3>
             <p>Founder Kopi Kuy</p>
         </div>
-    
+
         <div class="team">
             <img src="images/team/team2.jpg">
             <h3>Andi Asraf</h3>
             <p>Head of Marketing</p>
         </div>
-    
+
         <div class="team">
             <img src="images/team/team3.jpg">
             <h3>Angelina Felly</h3>
             <p>Barista</p>
         </div>
-    
+
         <div class="team">
             <img src="images/team/team4.jpg">
             <h3>Sarah Chou</h3>
@@ -126,11 +165,11 @@
 
     <section id="review" class="review">
         <h2>Apa Kata Mereka?</h2>
-    
+
         <p>
             Kami berikan fakta dan data, karena kepuasan konsumen selalu nomor 1 untuk kami.
         </p>
-    
+
         <div class="testimoni">
             <img src="images/customer/customer1.jpg">
             <div class="profile">
@@ -138,11 +177,11 @@
                 <p>Mahasiswa</p>
             </div>
             <p>
-                "Perdana kesini langsung merasa cocok dari segi tempat dan rasa. 
+                "Perdana kesini langsung merasa cocok dari segi tempat dan rasa.
                 Baristanya ramah dan pelayanannya maksimal, tidak sungkan bertanya keinginan pengunjung."
             </p>
         </div>
-    
+
         <div class="testimoni">
             <img src="images/customer/customer2.jpg">
             <div class="profile">
@@ -155,7 +194,7 @@
                 banget deh tempatnya wajib coba guys!!! Pelayanannya ramah banget 🤗."
             </p>
         </div>
-    
+
         <div class="testimoni">
             <img src="images/customer/customer3.jpg">
             <div class="profile">
@@ -163,7 +202,7 @@
                 <p>Dosen</p>
             </div>
             <p>
-                "Tempat nya nyaman sekali pasti kalo kalian dateng betah ... 
+                "Tempat nya nyaman sekali pasti kalo kalian dateng betah ...
                 selain tempat yang nyaman lalu pelayanan nya good banget...
                 dan kalian yang datang ke kopi kuy jangan lewatkan permainan yang disediakan
                 oleh kopi kuy , banyak banget game nya!"
@@ -171,48 +210,196 @@
         </div>
     </section>
 
-    <section class="contact-us" id="contact-us">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7932.741866032694!2d106.668581!3d-6.214715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9912c7f297b%3A0xe5a3a671dae861ab!2sKopi%20kuy!5e0!3m2!1sid!2sid!4v1680617229460!5m2!1sid!2sid"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
-        <div class="kontak">
-            <img src="images/icon/icon_phone.png">
-            <p>+62 (812) 9046 5034</p>
-        </div>
-    
-        <div class="kontak">
-            <img src="images/icon/icon_mail.png">
-            <p>hello@kopikuy.com</p>
-        </div>
-    
-        <div class="kontak">
-            <img src="images/icon/icon_instagram.png">
-            <a href="https://instagram.com" role="button">
-                <p>@kopi.kuy</p>
-            </a>
-        </div>
-    </section>
 
-    <footer>
-        <div class="navigasi">
-            <a href="#best-seller">Best Seller</a>
-            <a href="#our-team">Our Team</a>
-            <a href="#review">Review</a>
-            <a href="#contact-us">Contact Us</a>
-            <!--<a href="produk.html">Shop</a> -->
+    <footer id="contact-us" class="riki-block py-0 bg-dark">
+        <div class="container-fluid px-0 m-3">
+            <div class="row justify-content-between align-items-center g-0 border-footer">
+                <div class="col-md-6 d-flex justify-content-center order-first order-md-last">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.5927596383339!2d106.668005!3d-6.214701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9912c7f297b%3A0xe5a3a671dae861ab!2sKopi%20kuy!5e0!3m2!1sid!2sid!4v1691767739423!5m2!1sid!2sid"
+                        height="250" class="w-100" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+
+                <div class="col-md-6 text-center py-5 ">
+                    <div class="navigasi py-5">
+                        <a href="#best-seller">Best Seller</a>
+                        <a href="#our-team">Our Team</a>
+                        <a href="#review">Review</a>
+                        <a href="#contact-us">Contact Us</a>
+                        <a href="produk.html">Shop</a>
+                    </div>
+                    <p><a class="" href="#">
+                            <img class="" src="images/logo/logo_kuy.png" height="50">
+                        </a></p>
+                    <p>Connect with us</p>
+                    <p>
+
+                        <a href="https://wa.me/6282221924292" class="mx-2 text-secondary"><i
+                                class="bi fs-3 bi-telephone-plus" aria-hidden="true"></i></a>
+                        <a href="mailto:hello@kopikuy.com" class="mx-2 text-secondary"><i
+                                class="bi fs-3 bi-envelope-check" aria-hidden="true"></i></a>
+                        <a href="https://www.twitter.com" class="mx-2 text-secondary"><i class="bi fs-3 bi-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com" class="mx-2 text-secondary"><i class="bi fs-3 bi-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com" class="mx-2 text-secondary"><i class="bi fs-3 bi-instagram"
+                                aria-hidden="true"></i></a>
+                    </p>
+
+                </div>
+
+            </div>
+            <center class="pt-4">
+                <p>© 2023 Kopi Kuy. All Rights Reserved</p>
+            </center>
+
         </div>
-        <p>© 2023 Kopi Kuy. All Rights Reserved</p>
+
     </footer>
 
     <!--
         Kode HTML tidak boleh lewat dari batas ini
         Pastikan setiap section di tutup
         misalnya kode <section class="best-seller"> harus ada
-        di bawah kode </header> (perhatikan ada garis miringnya
+            di bawah kode </header> (perhatikan ada garis miringnya
         dan setiap section harus setelah kode </section>
         jangan menulis <section> di dalam <section>
     -->
+
+    <div class="modal fade" id="my-cart-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> My
+                        Cart</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover table-responsive" id="my-cart-table">
+                        <tbody>
+                            <tr title="summary 3" data-id="3" data-price="30">
+                                <td class="text-center" style="width: 30px;"><img width="30px" height="30px"
+                                        src="./My Cart_files/img_3.png"></td>
+                                <td>product 3</td>
+                                <td title="Unit Price">$30.00</td>
+                                <td title="Quantity"><input type="number" min="1" style="width: 70px;"
+                                        class="my-product-quantity" value="1"></td>
+                                <td title="Total" class="my-product-total">$30.00</td>
+                                <td title="Remove from Cart" class="text-center" style="width: 30px;"><a
+                                        href="javascript:void(0);" class="btn btn-xs btn-danger my-product-remove">X</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><strong>Total</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td><strong id="my-cart-grand-total">$30.00</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr style="color: red">
+                                <td></td>
+                                <td><strong>Total (including discount)</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td><strong id="my-cart-discount-price">$15.00</strong></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-default"
+                        data-dismiss="modal">Close</button><button type="button"
+                        class="btn btn-primary my-cart-checkout">Checkout</button></div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script type="text/javascript">
+    $(function () {
+
+        var goToCartIcon = function ($addTocartBtn) {
+            var $cartIcon = $(".my-cart-icon");
+            var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({ "position": "fixed", "z-index": "999" });
+            $addTocartBtn.prepend($image);
+            var position = $cartIcon.position();
+            $image.animate({
+                top: position.top,
+                left: position.left
+            }, 500, "linear", function () {
+                $image.remove();
+            });
+        }
+
+        $('.my-cart-btn').myCart({
+            currencySymbol: '$',
+            classCartIcon: 'my-cart-icon',
+            classCartBadge: 'my-cart-badge',
+            classProductQuantity: 'my-product-quantity',
+            classProductRemove: 'my-product-remove',
+            classCheckoutCart: 'my-cart-checkout',
+            affixCartIcon: true,
+            showCheckoutModal: true,
+            numberOfDecimals: 2,
+            cartItems: [
+                { id: 1, name: 'product 1', summary: 'summary 1', price: 10, quantity: 1, image: 'images/img_1.png' },
+                { id: 2, name: 'product 2', summary: 'summary 2', price: 20, quantity: 2, image: 'images/img_2.png' },
+                { id: 3, name: 'product 3', summary: 'summary 3', price: 30, quantity: 1, image: 'images/img_3.png' }
+            ],
+            clickOnAddToCart: function ($addTocart) {
+                goToCartIcon($addTocart);
+            },
+            afterAddOnCart: function (products, totalPrice, totalQuantity) {
+                console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+            },
+            clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) {
+                console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+            },
+            checkoutCart: function (products, totalPrice, totalQuantity) {
+                var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+                checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
+                $.each(products, function () {
+                    checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image);
+                });
+                alert(checkoutString)
+                console.log("checking out", products, totalPrice, totalQuantity);
+            },
+            getDiscountPrice: function (products, totalPrice, totalQuantity) {
+                console.log("calculating discount", products, totalPrice, totalQuantity);
+                return totalPrice * 0.5;
+            }
+        });
+
+        $("#addNewProduct").click(function (event) {
+            var currentElementNo = $(".row").children().length + 1;
+            $(".row").append('<div class="col-md-3 text-center"><img src="images/img_empty.png" width="150px" height="150px"><br>product ' + currentElementNo + ' - <strong>$' + currentElementNo + '</strong><br><button class="btn btn-danger my-cart-btn" data-id="' + currentElementNo + '" data-name="product ' + currentElementNo + '" data-summary="summary ' + currentElementNo + '" data-price="' + currentElementNo + '" data-quantity="1" data-image="images/img_empty.png">Add to Cart</button><a href="#" class="btn btn-info">Details</a></div>')
+        });
+    });
+</script>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length };
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>
 
 </html>

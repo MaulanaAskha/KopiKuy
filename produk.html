@@ -192,7 +192,7 @@
     <footer class="py-4 bg-dark">
         <div class="container">
             <div class="row ">
-                <div class="col-md-8">
+                <div class="col-md-8 d-sm-none d-lg-flex">
                     <ul class="nav">
                         <li class="nav-item">
                             <a class="nav-link link-light active" aria-current="page" href="index.html">Home</a>
@@ -211,7 +211,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-3 text-light text-end">
+                <div class="col w-lg-100 py-1 text-light text-end text-sm-center text-lg-end">
                     © 2023 Kopi Kuy. All Rights Reserved
                 </div>
             </div>
@@ -362,7 +362,7 @@
                         checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.price + " \t " + this.quantity);
                     });
 
-                    console.log(checkoutString);
+                    //console.log(checkoutString);
                     window.open("https://wa.me/6282221924292?text=" + encodeURI(checkoutString));
                 }
             });
